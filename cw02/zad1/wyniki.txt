@@ -1,0 +1,69 @@
+START: user: 0.0000000000, sys: 0.0900000000
+
+System functions - shuffle operation 
+ Record size: 4
+ Records quantity: 10000
+START: user: 0.0000000000, sys: 0.0000000000
+System functions - bubble operation 
+ Record size: 4
+ Records quantity: 10000
+START: user: 0.0000000000, sys: 0.0500000000
+Library functions - bubble sort operation
+ Record size: 4
+ Records quantity: 10000
+START: user: 0.0100000000, sys: 0.0900000000
+Library functions - shuffle sort operation
+ Record size: 4
+ Records quantity: 10000
+START: user: 0.0000000000, sys: 0.0000000000
+START: user: 0.0000000000, sys: 0.0800000000
+System functions - shuffle operation 
+ Record size: 512
+ Records quantity: 10000
+START: user: 0.0000000000, sys: 0.0000000000
+System functions - bubble operation
+ Record size: 512
+ Records quantity: 10000
+START: user: 0.0000000000, sys: 0.0700000000
+Library functions - bubble sort operation
+ Record size: 4
+ Records quantity: 10000
+START: user: 0.0100000000, sys: 0.0900000000
+Library functions - shuffle sort operation
+ Record size: 4
+ Records quantity: 10000
+START: user: 0.0000000000, sys: 0.0000000000
+START: user: 0.0100000000, sys: 0.1300000000
+System functions - shuffle operation 
+ Record size: 4096
+ Records quantity: 10000
+START: user: 0.0000000000, sys: 0.0000000000
+System functions - bubble operation
+ Record size: 4096
+ Records quantity: 10000
+START: user: 0.0000000000, sys: 0.0500000000
+Library functions - bubble sort operation
+ Record size: 4096
+ Records quantity: 10000
+START: user: 0.0200000000, sys: 0.1000000000
+Library functions - shuffle sort operation
+ Record size: 4096
+ Records quantity: 10000
+START: user: 0.0000000000, sys: 0.0000000000
+START: user: 0.0100000000, sys: 0.1100000000
+System functions - shuffle operation 
+ Record size: 4096
+ Records quantity: 10000
+START: user: 0.0000000000, sys: 0.0000000000
+System functions - bubble operation
+ Record size: 4096
+ Records quantity: 10000
+START: user: 0.0000000000, sys: 0.0800000000
+Library functions - bubble sort operation
+ Record size: 4096
+ Records quantity: 10000
+START: user: 0.0100000000, sys: 0.0900000000
+Library functions - shuffle sort operation
+ Record size: 4096
+ Records quantity: 10000
+START: user: 0.0000000000, sys: 0.0000000000

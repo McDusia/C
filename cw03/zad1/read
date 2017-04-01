@@ -1,0 +1,6 @@
+#a 56
+ls -l
+./testowy PATH
+./testowy a
+#a
+./testowy a
