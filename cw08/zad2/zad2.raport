@@ -1,0 +1,28 @@
+a)
+
+1. Gdy żaden wątek nie miał zamaskowanego sygnału, po wysyłaniu sygnału do całego procesu (dowolny a-d), wszystkie wątki natychmiast zostały przerwane (program się zakończył), w przypadku SIGSTOP nie jest to przerwanie a zatrzymanie.
+Komunikaty:
+a) dla SIGUSR1
+	User defined signal 1
+b) dla SIGTERM
+	Terminated
+c) dla SIGKILL
+	Killed
+d)dla SIGSTOP
+	[4]+ Zatrzymano	./zad2a1 100 130.dat 150 ma 4
+
+2. Gdy tylko główny wątek programu miał zamaskowany sygnał, to jeżeli sygnał został dostarczony po tym jak wszystkie inne wątki się zakończyły, to sygnał nie dochodził (główny wątek programu został uśpiony inne mogły zdążyć już wszystkie się zakończyć). Jeżeli natomiast nie zastosowano sztuczki z sleep(), sygnał zostawał przechwycony przez jakiś inny wątek, który nie miał ustawionej maski na ten sygnał (sygnał wysyłano do całego procesu - wszystkich wątków). Jeśli sygnał został wysłany do głównego wątku, to nie był odbierany, a jeśli do innych, to zostałby odebrany (w moich testach, zawsze sygnał zostawał wysłany do głównego wątku).
+
+3. W przypadku, gdy wszystkim wątkom zainstalowano niestandardową obsługę sygnałów (dotyczy to tylko SIGUSR1 i SIGTERM, SIGKILL i SIGSTOP nie można przechwycić), jeśli sygnał został wysłany do całego procesu, zostawał przełapany przez główny wątek procesu.
+
+4. Po wysłaniu sygnału do wątku, który miał zamaskowany ten sygnał, sygnał nie został odebrany w przypadku SIGUSR1 i SIGTERM, a w przypadku SIGKILL i SIGSTOP, których nie można maskować, sygnały zostały odebrane.
+
+5. Wysłanie sygnału do wątku, który ma ustawioną niestandardową obsługę sygnału (SIGUSR1 i SIGTERM), powoduje odebranie tego sygnału przez ten wątek i obsłużenie go w odpowiedniej funkcji (testowano dla pierwszego stworzonego wątku).
+
+
+b)
+
+Po wykonaniu dzielenia przez zera w jednym z wątków, cały proces natychmiast się zatrzymuje. Na ekran zostaje wypisany komunikat:
+Floating point exception (zrzut pamięci).
+
+Linux Fedora 25, system 64-bitowy, wersja jądra: 4.10.13-200.fc25.x86_64
